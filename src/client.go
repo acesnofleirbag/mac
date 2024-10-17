@@ -8,7 +8,7 @@ import (
 
 type Client struct {
     Conn net.Conn
-    Mailbox *imap.Mailbox
+    Mbox *imap.Mailbox
 }
 
 func NewClient(server string, port uint16) (*Client, error) {
@@ -23,6 +23,6 @@ func NewClient(server string, port uint16) (*Client, error) {
     }, nil
 }
 
-func DeleteMailbox(mailbox *imap.Mailbox) {}
+func DeleteMailbox(mbox *imap.Mailbox) {}
 
-func RenameMailbox(mailbox *imap.Mailbox) {}
+func RenameMailbox(mbox *imap.Mailbox) {}
